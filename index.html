@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App Suara Melayu</title>
+</head>
+<body>
+
+  <h1>App Suara Melayu 🔊</h1>
+
+  <textarea id="text" rows="5" cols="40">
+Selamat datang ke aplikasi saya!
+  </textarea>
+
+  <br><br>
+
+  <button onclick="cakap()">Tekan untuk dengar</button>
+
+  <script>
+    function cakap() {
+      const text = document.getElementById("text").value;
+      const speech = new SpeechSynthesisUtterance(text);
+      speech.lang = "ms-MY";
+      speechSynthesis.speak(speech);
+    }
+  </script>
+
+</body>
+</html>
